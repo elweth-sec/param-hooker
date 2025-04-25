@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Param Hooker",
+  "version": "1.0",
+  "author": "Elweth",
+  "description": "Discover parameters used by the frontend",
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
