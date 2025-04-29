@@ -1,16 +1,19 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Param Hooker",
   "version": "1.0",
   "author": "Elweth",
   "description": "Discover parameters used by the frontend",
   "permissions": [
-    "tabs",
-    "<all_urls>"
+    "tabs"
   ],
-  "web_accessible_resources": [
-    "inject.js"
+  "host_permissions": [
+    "*://*/*"
   ],
+  "web_accessible_resources": [{
+    "resources": ["*"],
+    "matches": ["<all_urls>"]
+  }],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
