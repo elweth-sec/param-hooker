@@ -7,6 +7,9 @@
   "permissions": [
     "tabs"
   ],
+  "icons": {
+    "1399": "icons/icon.png"
+  },
   "host_permissions": [
     "*://*/*"
   ],
